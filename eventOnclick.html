@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body onload="myFunctionload()">
+
+<h2>JavaScript HTML Events</h2>
+<div style="background-color: green;">
+<button onclick="this.innerHTML=Date()">Current Time</button>
+
+</div>
+<div >
+ 
+    Enter your name: 
+<input type="text" id="fname1" onblur="myFunction()" onfocus="myFunction1(this)">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p> <br><br>
+</div>
+<div>
+    <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" border="0" src="../images/smiley.jpg" alt="Smiley" width="32" height="32">
+
+</div>
+<script>
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+    function myFunction() {
+        let x= document.getElementById("fname1");
+        x.value = x.value.toUpperCase();
+               }
+               function myFunction1(y) {
+                    y.style.background = "yellow";
+                        }
+
+    
+    function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+
+function myFunctionload() {
+  alert("Page is loaded, Welcome to MYPage");
+}
+
+    </script>
+    
+    
+</body>
+</html>
