@@ -11,7 +11,8 @@ function orderPizza(type, name, callback) {
     console.log('Pizza is for preparation');
     setTimeout(function () {
         let msg = `Your ${type} ${name} Pizza is ready! The total bill is $13`;
-        callback(msg);
+        let msg1= "please pay Rs $13 ";
+        callback(msg+msg1);
     }, 3000);
 }
 
